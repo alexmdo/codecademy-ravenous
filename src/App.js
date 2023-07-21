@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Business from './components/Business/Business';
 
 function App() {
+  const restauranteData = [
+    {
+      image: 'restaurant1.jpg',
+      name: 'React Cafe',
+      address: '123 Anywhere St',
+      city: 'Anytown',
+      state: 'NY',
+      zipCode: '12345',
+      category: 'Cafe',
+      rating: 4.5,
+      reviewCount: 12
+    }
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {restauranteData.map((restaurant, index) => (
+        <Business key={index} {...restaurant} />
+      ))}
     </div>
   );
 }
