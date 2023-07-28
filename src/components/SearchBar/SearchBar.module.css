@@ -1,0 +1,35 @@
+/* SearchBar.module.css */
+
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-inputs {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .search-inputs input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .search-buttons button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .search-buttons button:last-child {
+    margin-right: 0;
+  }
+  
