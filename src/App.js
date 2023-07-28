@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import Business from './components/Business/Business';
+import BusinessList from './components/BusinessList/BusinessList';
+import SearchBar from './components/SearchBar/SearchBar';
 
 function App() {
   const restauranteData = [
@@ -14,14 +14,24 @@ function App() {
       category: 'Cafe',
       rating: 4.5,
       reviewCount: 12
+    },
+    {
+      image: 'sample.jpg',
+      name: 'Sample Restaurant',
+      address: '456 Main St',
+      city: 'Sometown',
+      state: 'CA',
+      zipCode: '54321',
+      category: 'Restaurant',
+      rating: 3.5,
+      reviewCount: 24,
     }
   ];
 
   return (
     <div className="app">
-      {restauranteData.map((restaurant, index) => (
-        <Business key={index} {...restaurant} />
-      ))}
+      <SearchBar />
+      <BusinessList businesses={restauranteData} />
     </div>
   );
 }
